@@ -1,0 +1,43 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.box {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 800px;
+  height: 350px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.box h2, p { color: black}
+.box p { font-style: italic;}
+
+.stars { 
+  display: flex;
+  justify-content: center;
+}
+.star {
+  font-size: 2.2rem;
+  margin: 0 24px;
+}
+#btn-submit {
+  background-color: blueviolet;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+  width: 300px;
+  height: 32px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 5px grey;
+}
+
+#btn-submit:hover {
+  background-color: #8ab6e2;
+  cursor: pointer;
+}
