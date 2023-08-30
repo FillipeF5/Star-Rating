@@ -10,8 +10,8 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  width: 800px;
-  height: 350px;
+  max-width: 800px;
+  min-height: fit-content;
   border-radius: 10px;
   margin: 0 auto;
 }
@@ -32,12 +32,18 @@
   border-radius: 5px;
   align-items: center;
   width: 300px;
-  height: 32px;
-  margin: 0 auto;
+  height: 2.5em;
+  margin: 1rem auto;
   box-shadow: 2px 2px 5px grey;
 }
 
 #btn-submit:hover {
   background-color: #8ab6e2;
   cursor: pointer;
+}
+
+.total_rating {
+  background-color: #8ab6e2;
+  opacity: .5;
+  margin-top: 100px;
 }
