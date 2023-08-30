@@ -10,4 +10,4 @@ Information about the challenge such as rules, layout (Figma) are found directly
 
 To start the application, use 'npm run dev' in the terminal
 
-<img src="./public/star rating.png" width="680px" alt="my-app" title="my-app"/>
+<img src="./public/v1.1.png" width="680px" alt="my-app" title="my-app"/>
