@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from 'react'
 import { FaStar } from 'react-icons/fa'
 import { Button } from 'carbon-components-react';
-import "react-color-palette/css";
 
 
 function App() {
@@ -70,14 +68,15 @@ function App() {
 
   return (
     <>
-      <div className="App">
-        <div className="box">
-          <h2>How many stars would you give to our App?</h2>
-          <div className="stars">
+      <div className="container">
+
+        <div className="container-md mx-auto mt-10 w-1/2 h-min bg-stone-200 rounded-md flex flex-col p-5 text-center">
+          <h2 className='text-black my-3'>How many stars would you give to our App?</h2>
+          <div className="flex flex-row justify-center">
             {stars.map((_, index) => {
               return (
                 <FaStar
-                  className="star"
+                  className="text-4xl mx-2"
                   key={index}
                   style={{ cursor: "pointer" }}
                   color={(hoverValue || currentValue) > index ? "orange" : "grey"}
@@ -89,30 +88,33 @@ function App() {
             })}
           </div>
 
-          <p>{message}</p>
+          <p className='m-5 text-black'>{message}</p>
 
           <Button
-            id="btn-submit"
+            className="rounded-lg hover:bg-purple-800 bg-purple-500 w-auto p-2 m-auto"
             onClick={handleSubmit}
           >Submit</Button>
+        </div>
 
-          <div className='total_rating'>
-            <h2>This is our average rating in the app store: {averageRating}</h2>
 
-            <p>
-              {stars.map((_, index) => {
-                return (
-                  <FaStar
-                    className="star"
-                    key={index}
-                    color={(averageRating) > index ? "orange" : "grey"}
-                  />
-                )
-              })}
-            </p>
+        <div className='container-md mx-auto w-1/2 h-min bg-stone-200 rounded-md flex flex-col p-5 m-7 shadow-xl shadow-black-50'>
+          <h2 className='text-center text-black'>This is our average rating in the app store: {averageRating}</h2>
+
+          <div className='flex flex-row justify-center m-3'>
+
+            {stars.map((_, index) => {
+              return (
+                <FaStar
+                  className="text-4xl mx-2"
+                  key={index}
+                  color={(averageRating) > index ? "orange" : "grey"}
+                />
+              )
+            })}
           </div>
 
         </div>
+
       </div>
     </>
   )
